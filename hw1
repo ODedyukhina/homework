@@ -1,4 +1,4 @@
-// task 1
+// task 1 p.68
 let bodyParts = ["рот", "нос", "глаза", "стопа", "ухо", "локоть"];
 let adjective = ["глупая", "маленькая", "тупая", "унылая", "отвратная"];
 let words = ["ложка", "пень", "река", "игла", "букашка", "пустышка"];
@@ -7,17 +7,17 @@ let randomAdjective = adjective[Math.floor(Math.random()*adjective.length)];
 let randomWords = words[Math.floor(Math.random()*words.length)];
 let insult = "У тебя " + randomBodyParts + " словно " + randomAdjective + " " + randomWords + "!!!!";
 
-//task 2
+//task 2 p.68
 let animalBodyPart = ["хобот", "лапа", "хвост", "рога", "морда", "копыта"];
 let animals = ["слон", "корова", "собака", "бык", "зебра", "комар", "жаба"];
 let randomAnimalBodyPart = animalBodyPart[Math.floor(Math.random()* animalBodyPart.length)];
 let randomAnimal  = animals[Math.floor(Math.random()* animals.length)];
 let newInsult = "У тебя " + randomBodyParts + " еще более " + randomAdjective + "," + " чем " + randomAnimalBodyPart + " у " + randomAnimal;
 
-// task 3
+// task 3 p.68
 let newArrayInsults = ["У тебя", randomBodyParts, "еще более", randomAdjective, ",", randomAnimalBodyPart, "у", randomAnimal];
 newArrayInsults.join(" ");
 
-//task 4
+//task 4 p.68
 let numbers = [3,2,1];
 numbers.join(" больше, чем ");
