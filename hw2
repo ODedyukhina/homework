@@ -1,0 +1,20 @@
+//task 1 p.82
+let scores = {
+    sasha: 0,
+    pasha: 10,
+    masha: 7
+
+};
+
+scores.sasha +=12;
+scores.pasha += 3;
+scores.masha +=8;
+scores.sasha +=5;
+
+//task 2 p.82
+let myCrazyObject = {
+    "name": "Нелепый объект",
+    "some array": [7,9, {purpose: "путаница", number:123}, 3.3],
+    "random animal": "Банановая акула"
+};
+myCrazyObject["some array"][2]["number"];
