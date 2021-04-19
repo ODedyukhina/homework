@@ -1,0 +1,74 @@
+//try it p.101
+const myName = "Sasha";
+let name;
+const momName = "Anelia";
+const dadName = "Misha";
+
+if (name === myName) {
+    console.log("Hello Sasha")
+}
+else if (name === momName) {
+    console.log("Hello Mom")
+}
+else if (name === dadName){
+    console.log("Hello Dad");
+}
+else {
+    console.log("Hello Stranger")
+}
+name = "Mark";
+//try it p.107
+for (let x = 3; x < 10000; x = x *3){
+    console.log(x)
+};
+let a = 3;
+while (a < 10000){
+        console.log(a);
+        a = a * 3;
+}
+//task 1 p 108
+let animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
+for (let i = 0; i <animals.length; i++){
+    animals[i]=animals[i] + "- прекрасное животное!";
+    console.log(animals[i]);
+}
+//task 2 p 108
+let alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+let randomString = "";
+let randomString2="";
+for(let i = 0; i < alphabet.length; i++){
+    let k = Math.floor(Math.random()* alphabet.length);
+    randomString+=alphabet[k];
+    
+}
+console.log(randomString);
+
+while( randomString2.length < 6)
+{
+    let j = Math.floor(Math.random()*alphabet.length);
+    randomString2 += alphabet[j];
+}
+console.log(randomString2);
+//task 3 p 108
+let input = "javascript is awesome";
+let output = "";
+
+for(let i = 0; i < input.length; i++){
+    if (input[i] === "a"){
+     let a = "4";
+    output += a;
+    } else if (input[i] === "e") {
+        a = "3";
+        output += a;
+    } else if (input[i] === "i") {
+        a = "1";
+        output += a;
+    } else if (input[i] === "o") {
+        a = "0";
+        output += a;
+    } else {
+        output+=input[i];
+    }
+    
+}
+console.log(output);
