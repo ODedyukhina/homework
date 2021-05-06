@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">Hello world!</h1>
+    <h2>from Friends</h2>   
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+            //task 1 p.155
+
+            $("h1").text("My friends");
+            let friends = ["Phoebe", "Joey", "Monica", "Ross", "Rachel"];
+            for (let i = 0; i < friends.length; i++) {
+                $("body").append("<p>" + friends[i] + "</p>");
+            }
+            $("p").hide(1000);
+            $("p").fadeIn(3000);
+            $("p").append(" best");
+
+            //task 2 p.155
+            let a = 1000;
+         for(let i = 0; i < 5; i++) {             
+             $("h1").fadeOut(a).fadeIn(a);            
+             a += 1000;            
+         }
+
+            //task 3 p.155
+         $("p").fadeOut(1000).delay(5000).fadeIn(1000);
+            
+           //task 4 p.155
+           $("h2").fadeTo(2000, 0.2);
+
+    </script>
+</body>
+</html>
