@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+            //task 2 p.190
+        let Car = function(x,y, speed) {
+            this.x = x;
+            this.y = y;
+            this.speed = speed;
+        };        
+
+        Car.prototype.draw = function() {
+            let carHtml = '<img src ="https://th.bing.com/th/id/OIP.L7gvFdV_cxV4hWVve9j7yQAAAA?w=160&h=80&c=7&o=5&pid=1.7">';
+            this.carElement = $(carHtml);
+            this.carElement.css({
+                position: "absolute",
+                left: this.x,
+                top: this.y
+            });
+            $("body").append(this.carElement);
+        };
+
+        let tesla = new Car (20,20,15);
+        let nissan = new Car(100,200,15);
+
+        
+        Car.prototype.moveRight = function(j) {
+            this.x = this.x + j;
+
+            this.carElement.css({
+                left: this.x,
+                top: this.y
+            });
+        }; 
+        Car.prototype.moveLeft = function(j){
+            this.x= this.x - j;
+            this.carElement.css({
+                left: this.x,
+                top: this.y
+            });
+        };
+        Car.prototype.moveUp = function(j){
+            this.y = this.y - j;
+            this.carElement.css({
+                left: this.x,
+                top: this.y
+            });
+        };
+
+        Car.prototype.moveDown = function(j){
+            this.y = this.y + j;
+            this.carElement.css({
+                left: this.x,
+                top: this.y
+            });
+        };
+
+        // task 1 p. 189
+
+        tesla.draw();
+        nissan.draw();
+
+        // let timer = setInterval(() => nissan.moveRight(), 1000);
+        // let timer2 = setInterval(() => tesla.moveDown(), 2000);
+     
+        //task 3 p.189
+        
+        let timerTesla = setInterval( () => tesla.moveRight(Math.floor(Math.random() * 5), 30));
+        let timerNissan =setInterval( () => nissan.moveRight(Math.floor(Math.random() * 5), 30));
+        
+    </script>
+</body>
+</html>
